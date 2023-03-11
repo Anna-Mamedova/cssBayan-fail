@@ -48,6 +48,7 @@ h1 {
     display: block;
     padding: 25px 0;
     width: 100%;
+    color: blue;
     transition: ease-in-out 300ms;
 }
 
@@ -82,4 +83,9 @@ h1 {
     padding: 20px 30px 10px;
     visibility: visible;
     cursor: pointer;
+}
+
+.accordion input:checked + label .label,
+.accordion:hover .label {
+    color: black;
 }
