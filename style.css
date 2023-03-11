@@ -10,7 +10,11 @@ h1 {
     margin: 20px 0;
     width: 1000px;
     margin: auto;
-    /* z-index: 100; */
+}
+
+.accordion-item {
+    /* height: 500px; */
+    z-index: 150;
 }
 
 .accordion .accordion-body {
@@ -30,6 +34,13 @@ h1 {
 }
 
 .accordion label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid gray;
+}
+
+.accordion .label {
     font-family: Verdana, sans-serif;  
     font-size: 18px;
     font-weight: 900;
@@ -38,34 +49,30 @@ h1 {
     padding: 25px 0;
     width: 100%;
     transition: ease-in-out 300ms;
-    border-top: 1px solid gray;
 }
 
 .accordion input{
     display: none;
 }
 
-.accordion label::before {
-    position: relative;
+.accordion .label-before {
     visibility: hidden;
     opacity: 0;
-    top: -12px;
-    content: '+';
-    float: right;
     font-size: 30px;
     font-weight: 900;
     transition: opacity ease-in-out 300ms;
 }
 
-.accordion:hover label::before {
+.accordion:hover .label-before {
+    line-height: 20px;
     visibility: visible;
     opacity: 1;
 }
 
-.accordion input:checked + label::before,
-.accordion .accordion-item:hover label::before {
+.accordion input:checked + label .label-before,
+.accordion .accordion-item:hover .label-before {
     transition: transform 300ms;
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
 }
 
 .accordion input:checked + label + .accordion-body,
@@ -73,6 +80,6 @@ h1 {
 .accordion .accordion-item:hover .accordion-body {
     height: 550px;
     padding: 20px 30px 10px;
-    visibility:visible;
+    visibility: visible;
     cursor: pointer;
 }
