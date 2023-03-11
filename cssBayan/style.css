@@ -11,8 +11,9 @@ h1 {
     font-family: Verdana, sans-serif;
     font-size: 2em;
 }
+
 .accordion {
-    width: 80%;
+    width: 60%;
     margin: auto;
 }
 
@@ -36,7 +37,7 @@ img {
     transition: width ease-in 300ms;
 }
 
-.accordion label {
+.mem-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,7 +80,7 @@ img {
     transform: rotate(-45deg);
 }
 
-.accordion input:checked + label + .accordion-body,
+.accordion input:checked + label .accordion-body,
 .accordion .accordion-item:hover .accordion-body {
     height: 100%;
     padding: 1em 0;
@@ -87,9 +88,9 @@ img {
     cursor: pointer;
 }
 
-.accordion input:checked + label + .accordion-body img,
+.accordion input:checked + label .accordion-body img,
 .accordion .accordion-item:hover img {
-    width: 80%;
+    width: 50%;
 }
 
 .accordion input:checked + label .label,
@@ -114,7 +115,7 @@ img {
         font-size: 1.5em;
     }
 
-    .accordion input:checked + label + .accordion-body img,
+    .accordion input:checked + label .accordion-body img,
     .accordion .accordion-item:hover img {
     width: 90%;
     }
